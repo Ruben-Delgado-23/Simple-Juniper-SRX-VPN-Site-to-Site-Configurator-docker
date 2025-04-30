@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Configurator - Juniper SRX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>VPN Site-to-Site Configurator</h1>
+        
+        <!-- Formulario para capturar los datos -->
+        <form id="vpn-form">
+            <div class="diagram-container">
+                <div class="input-group zone-left">
+                    <label for="zone1-name">Zone</label>
+                    <input type="text" id="zone1-name" name="zone1_name" placeholder="e.g., trust">
+                    <label for="zone1-interface">Interface</label>
+                    <input type="text" id="zone1-interface" name="zone1_interface" placeholder="e.g., ge-0/0/0">
+                    <label for="zone1-network">Local Network</label>
+                    <input type="text" id="zone1-network" name="zone1_network" placeholder="e.g., 192.168.1.0/24">
+                </div>
+                
+                <div class="input-group ike-left">
+                    <label for="ike-secret">IKE Pre-shared Secret</label>
+                    <input type="text" id="ike-secret" name="ike_secret" placeholder="e.g., secretkey123">
+                </div>
+                
+                <div class="input-group zone-left-secondary">
+                    <label for="zone2-name">Zone</label>
+                    <input type="text" id="zone2-name" name="zone2_name" placeholder="e.g., untrust">
+                    <label for="zone2-interface">Interface</label>
+                    <input type="text" id="zone2-interface" name="zone2_interface" placeholder="e.g., ge-0/0/1">
+                </div>
+                
+                <div class="input-group zone-right">
+                    <label for="remote-ip">Remote IP</label>
+                    <input type="text" id="remote-ip" name="remote_ip" placeholder="e.g., 1.1.1.1">
+                </div>
+                
+                <div class="input-group zone-right-secondary">
+                    <label for="zone2-network">Remote Network</label>
+                    <input type="text" id="zone2-network" name="zone2_network" placeholder="e.g., 172.16.1.0/24">
+                </div>
+            </div>
+            
+            <button type="submit" id="generate">Generate Configuration</button>
+        </form>
+        
+        <pre id="output"></pre>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

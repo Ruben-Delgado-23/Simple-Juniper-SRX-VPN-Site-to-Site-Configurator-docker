@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.diagram-container {
+    width: 1100px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url("/static/diagram.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /*border: 1px solid #ccc;*/
+    margin-bottom: 30px;
+}
+
+/* Estilo general de inputs */
+.input-group {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Posiciones fijas */
+.zone-left {
+    top: 145px;
+    left: 1px;
+}
+
+.ike-left {
+    top: 144px;
+    left: 270px;
+}
+
+.zone-left-secondary {
+    top: -21px;
+    left: 266px;
+}
+
+.zone-right {
+    top: -8px;
+    left: 673px;
+}
+
+.zone-right-secondary {
+    top: 263px;
+    left: 752px;
+}
+
+label {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+input {
+    width: 160px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+pre {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: monospace;
+    max-height: 250px;
+    overflow: auto;
+    border-radius: 5px;
+}
