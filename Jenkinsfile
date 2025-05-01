@@ -41,7 +41,7 @@ spec:
 {
   "auths": {
     "https://index.docker.io/v1/": {
-      "auth": "/N@yRJatLSqW87K"  // <== Reemplaza con tu base64 real
+      "auth": "cnViZW4wOTIzOi9OQHlSSmF0TFNxVzg3Sw=="
     }
   }
 }
