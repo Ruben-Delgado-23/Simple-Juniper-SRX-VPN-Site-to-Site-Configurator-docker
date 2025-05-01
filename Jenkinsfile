@@ -23,13 +23,13 @@ spec:
   }
 
   environment {
-    IMAGE = "rdelgado/learn-jenkins-app"
+    IMAGE = "Ruben-Delgado-23/Simple-Juniper-SRX-VPN-Site-to-Site-Configurator-docker"
   }
 
   stages {
     stage('Clonar repositorio') {
       steps {
-        git 'https://github.com/Ruben-Delgado-23/learn-jenkins-app.git'
+        git 'https://github.com/Ruben-Delgado-23/Simple-Juniper-SRX-VPN-Site-to-Site-Configurator-docker.git'
       }
     }
 
@@ -41,7 +41,7 @@ spec:
 {
   "auths": {
     "https://index.docker.io/v1/": {
-      "auth": "cmRlbGdhZG86Y2xhdmUxMjM="  // <== Reemplaza con tu base64 real
+      "auth": "/N@yRJatLSqW87K"  // <== Reemplaza con tu base64 real
     }
   }
 }
